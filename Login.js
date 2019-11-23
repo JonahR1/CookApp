@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet , View, TextInput, Button} from 'react-native'
+import { StyleSheet , View, TextInput, TouchableOpacity, Text, KeyboardAvoidingView} from 'react-native'
 
 class Login extends React.Component {
     constructor(props){
@@ -21,12 +21,21 @@ class Login extends React.Component {
 
     render() {
         return (
-            <View style = {styles.container}>
+            <KeyboardAvoidingView style = {styles.container} behavior = "padding" enabled>
+                <Text style = {styles.text} >
+                    Username
+                </Text>
                 <TextInput style = {styles.textInput} placeholder = "Enter your username" onChangeText = {(text) => this.handleChange(this.state.nameState[0],text)}/>
+                <Text style = {styles.text}>
+                    Password
+                </Text>
                 <TextInput style = {styles.textInput} secureTextEntry={true} placeholder = "Enter your password" onChangeText = {(text) => this.handleChange(this.state.nameState[0],text)}/>
-                <Button style = {styles.button} title='Connection' onPress={() => {}}/>
-                <Button style = {styles.button} title = 'Sign Up'/>
-            </View>
+                <TouchableOpacity style = {styles.buttonText}>
+                    <Text style = {styles.buttonText}>
+                        Login
+                    </Text>
+                </TouchableOpacity>
+            </KeyboardAvoidingView>
         )
     }
 }
@@ -34,18 +43,26 @@ class Login extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      marginTop: "50%"
+      flex: 1
     },
     textInput: {
-        borderColor: 'gray', 
-        borderWidth: 1,
-        color: 'white'
+        width: "100%",
+        fontSize: 26,
+        color: "white",
+        marginVertical: 10
     },
-    button: {
-        alignItems: 'center',
-        backgroundColor: '#DDDDDD',
-        padding: 10
+    buttonText: {
+        fontSize: 35,
+        fontWeight: "bold",
+        color: "white",
+        backgroundColor: "purple",
+        textAlign: "center",
+        borderRadius: 5
+    },
+    text: {
+        fontSize: 26,
+        fontWeight: "bold",
+        color: "black"
     }
   });
   
