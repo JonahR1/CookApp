@@ -22,6 +22,7 @@ class HomePage extends React.Component{
                 component: <Login />,
                 isLogin: true
             });
+            styles.button.backgroundColor = "purple";
         }
         else if(!isLogin && this.state.isLogin) {
             this.setState({
@@ -33,20 +34,20 @@ class HomePage extends React.Component{
 
     render(){
         return(
-            <View style = {{backgroundColor:"white", marginTop:"50%"}}>
+            <View style = {{backgroundColor:"white", marginTop:"60%"}}>
                 <View style = {styles.container}>
-                    <TouchableOpacity style = {styles.button} onPress = {() => this.onSwitch(true)}>
-                        <Text style = {styles.text}>
+                    <TouchableOpacity style = {this.state.isLogin ? [styles.button, styles.backgroundColorPurple, styles.borderTopLeftRadius10] : styles.button} onPress = {() => this.onSwitch(true)}>
+                        <Text style = {this.state.isLogin ?  [styles.text, {color: "white"}] : styles.text}>
                             Log In
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style = {styles.button} onPress = {() => this.onSwitch(false)}> 
-                        <Text style = {styles.text}>
+                    <TouchableOpacity style = {this.state.isLogin ? styles.button : [styles.button, styles.backgroundColorPurple, styles.borderTopRightRadius10] } onPress = {() => this.onSwitch(false)}> 
+                        <Text style = {this.state.isLogin ? styles.text : [styles.text, {color: "white"}] }>
                             Sign Up
                         </Text>
                     </TouchableOpacity>
                 </View> 
-                <View style = {{}}>
+                <View style = {{marginTop:"10%"}}>
                     {this.state.component}
                 </View>
             </View>
@@ -54,24 +55,32 @@ class HomePage extends React.Component{
     }
     
 }
-const styles = StyleSheet.create({
+let styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         width: "95%"
     },
     button: {
-        marginTop: "50%",
         alignItems: 'center',
-        backgroundColor: 'purple',
+        backgroundColor: "white",
         fontWeight: "bold",
         padding: 10,
-        width: "50%"
+        width: "50%",
     },
     text: {
         borderColor:"black",
         color: "black",
         fontWeight: "bold",
         fontSize: 35
+    },
+    backgroundColorPurple: {
+        backgroundColor: "purple"
+    },
+    borderTopRightRadius10: {
+        borderTopRightRadius: 10
+    },
+    borderTopLeftRadius10: {
+        borderTopLeftRadius: 10
     }
   });
   
