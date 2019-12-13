@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import Login from './Login';
-import SignUp from './SignUp';
-import HomePage from './HomePage';
+import HomePage from './src/components/HomePage';
 
 export default class App extends React.Component {
   render() {
