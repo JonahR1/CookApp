@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 23,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Email
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    placeholder="Enter your Email"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 23,
+        "marginVertical": 10,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 23,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Username
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    placeholder="Enter your Username"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 23,
+        "marginVertical": 10,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 23,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Password
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    placeholder="Enter your Password"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 23,
+        "marginVertical": 10,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "purple",
+        "borderRadius": 5,
+        "color": "white",
+        "fontSize": 33,
+        "fontWeight": "bold",
+        "opacity": 1,
+        "textAlign": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "purple",
+          "borderRadius": 5,
+          "color": "white",
+          "fontSize": 33,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Submit
+    </Text>
+  </View>
+</View>
+`;
